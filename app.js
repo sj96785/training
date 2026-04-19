@@ -14,74 +14,47 @@ const TEMPLATE_TYPES = [
 const seedTemplates = () => ([
   {
     id: uid(),
-    name: '推拉日（目前常用）',
-    type: 'push-pull',
-    note: '把推與拉放同一天，適合你目前的訓練方式。',
-    enabled: true,
-    items: [
-      { id: uid(), name: '槓鈴臥推', group: '胸', sets: 4, reps: '6-10', rest: 150, note: '主力推' },
-      { id: uid(), name: '引體向上', group: '背', sets: 4, reps: '6-10', rest: 120, note: '可加重' },
-      { id: uid(), name: '上斜啞鈴臥推', group: '胸', sets: 3, reps: '8-12', rest: 90, note: '' },
-      { id: uid(), name: '胸支撐划船', group: '背', sets: 3, reps: '8-12', rest: 90, note: '' },
-      { id: uid(), name: '啞鈴肩推', group: '肩', sets: 3, reps: '8-12', rest: 90, note: '' },
-      { id: uid(), name: '側平舉', group: '肩', sets: 4, reps: '12-20', rest: 60, note: '感受度優先' },
-      { id: uid(), name: '面拉', group: '肩', sets: 3, reps: '12-20', rest: 60, note: '後三角' },
-      { id: uid(), name: '三頭下壓', group: '三頭', sets: 3, reps: '10-15', rest: 60, note: '' },
-      { id: uid(), name: '啞鈴彎舉', group: '二頭', sets: 3, reps: '10-15', rest: 60, note: '' },
-    ],
-  },
-  {
-    id: uid(),
-    name: '推日',
+    name: '上肢A（主推）',
     type: 'push',
-    note: '胸、肩、三頭。',
+    note: '一週三練版本。前兩動作各 3 組休 180 秒，後兩動作各 2 組休 150 秒。',
     enabled: true,
     items: [
-      { id: uid(), name: '槓鈴臥推', group: '胸', sets: 4, reps: '6-10', rest: 150, note: '主力推' },
-      { id: uid(), name: '上斜啞鈴臥推', group: '胸', sets: 3, reps: '8-12', rest: 90, note: '' },
-      { id: uid(), name: '啞鈴肩推', group: '肩', sets: 3, reps: '8-12', rest: 90, note: '' },
-      { id: uid(), name: '側平舉', group: '肩', sets: 4, reps: '12-20', rest: 60, note: '' },
-      { id: uid(), name: '雙槓撐體', group: '胸', sets: 3, reps: '8-12', rest: 90, note: '可視情況改器械' },
-      { id: uid(), name: '三頭下壓', group: '三頭', sets: 3, reps: '10-15', rest: 60, note: '' },
-      { id: uid(), name: '過頭三頭伸展', group: '三頭', sets: 3, reps: '10-15', rest: 60, note: '' },
+      { id: uid(), name: '啞鈴肩推', group: '肩', sets: 3, reps: '6-10', rest: 180, note: '前段主力動作' },
+      { id: uid(), name: '槓鈴划船', group: '背', sets: 3, reps: '6-10', rest: 180, note: '前段主力動作' },
+      { id: uid(), name: '上斜啞鈴臥推', group: '胸', sets: 2, reps: '8-12', rest: 150, note: '後段輔助動作' },
+      { id: uid(), name: '引體向上', group: '背', sets: 2, reps: '8-12', rest: 150, note: '後段輔助動作' },
     ],
   },
   {
     id: uid(),
-    name: '拉日',
+    name: '上肢B（主拉）',
     type: 'pull',
-    note: '背、二頭、後肩。',
+    note: '一週三練版本。前兩動作各 3 組休 180 秒，後兩動作各 2 組休 150 秒。',
     enabled: true,
     items: [
-      { id: uid(), name: '引體向上', group: '背', sets: 4, reps: '6-10', rest: 120, note: '' },
-      { id: uid(), name: '槓鈴划船', group: '背', sets: 4, reps: '6-10', rest: 120, note: '' },
-      { id: uid(), name: '坐姿划船', group: '背', sets: 3, reps: '8-12', rest: 90, note: '' },
-      { id: uid(), name: '下拉', group: '背', sets: 3, reps: '8-12', rest: 90, note: '' },
-      { id: uid(), name: '面拉', group: '肩', sets: 3, reps: '12-20', rest: 60, note: '後三角' },
-      { id: uid(), name: '啞鈴彎舉', group: '二頭', sets: 3, reps: '10-15', rest: 60, note: '' },
-      { id: uid(), name: '槓鈴彎舉', group: '二頭', sets: 3, reps: '8-12', rest: 60, note: '' },
+      { id: uid(), name: '負重引體向上', group: '背', sets: 3, reps: '4-8', rest: 180, note: '前段主力動作' },
+      { id: uid(), name: '倒立伏地挺身', group: '肩', sets: 3, reps: '4-8', rest: 180, note: '前段主力動作' },
+      { id: uid(), name: '反手引體向上', group: '背', sets: 2, reps: '6-10', rest: 150, note: '後段輔助動作' },
+      { id: uid(), name: '負重伏地挺身', group: '胸', sets: 2, reps: '8-12', rest: 150, note: '後段輔助動作' },
     ],
   },
   {
     id: uid(),
     name: '腿日',
     type: 'legs',
-    note: '腿前、腿後、臀、小腿。',
+    note: '一週三練版本。前兩動作各 3 組休 180 秒，後兩動作各 2 組休 150 秒。',
     enabled: true,
     items: [
-      { id: uid(), name: '深蹲', group: '腿前', sets: 4, reps: '5-8', rest: 180, note: '主力腿推' },
-      { id: uid(), name: '羅馬尼亞硬舉', group: '腿後', sets: 4, reps: '6-10', rest: 150, note: '' },
-      { id: uid(), name: '腿推', group: '腿前', sets: 3, reps: '10-15', rest: 90, note: '' },
-      { id: uid(), name: '保加利亞分腿蹲', group: '臀', sets: 3, reps: '8-12', rest: 90, note: '' },
-      { id: uid(), name: '腿屈伸', group: '腿前', sets: 3, reps: '12-15', rest: 60, note: '' },
-      { id: uid(), name: '腿後勾', group: '腿後', sets: 3, reps: '12-15', rest: 60, note: '' },
-      { id: uid(), name: '站姿提踵', group: '小腿', sets: 4, reps: '10-20', rest: 45, note: '' },
+      { id: uid(), name: '頸前深蹲', group: '腿前', sets: 3, reps: '4-8', rest: 180, note: '前段主力動作' },
+      { id: uid(), name: '分腿蹲（雙腳互換）', group: '腿前', sets: 3, reps: '8-12', rest: 180, note: '前段主力動作' },
+      { id: uid(), name: '器械股四頭', group: '腿前', sets: 2, reps: '10-15', rest: 150, note: '後段輔助動作' },
+      { id: uid(), name: '器械股二頭', group: '腿後', sets: 2, reps: '10-15', rest: 150, note: '後段輔助動作' },
     ],
   },
 ]);
 
 const DEFAULT_STATE = {
-  version: 2,
+  version: 3,
   templates: seedTemplates(),
   sessions: [],
   activeSession: null,
@@ -193,7 +166,7 @@ function renderHome() {
   const quickTemplates = sortTemplatesForQuickStart(state.templates.filter((t) => t.enabled));
   const quickStart = quickTemplates
     .map((t, index) => {
-      const recommended = index === 0 && t.type === 'push-pull';
+      const recommended = index === 0;
       return `
         <button class="template-start-card ${recommended ? 'recommended' : ''}" data-action="start-template" data-template-id="${t.id}">
           <div class="row gap-8 wrap">
@@ -247,8 +220,8 @@ function renderHome() {
       <div class="row-between gap-12 wrap">
         <div>
           <div class="eyebrow">快速開始</div>
-          <h2>已優先把推拉同日排最前面</h2>
-          <div class="muted">你目前推拉會一起練，所以首頁與訓練頁都會先推薦推拉日。</div>
+          <h2>已改成你目前的一週三練模板</h2>
+          <div class="muted">首頁與訓練頁會優先顯示上肢A（主推）、上肢B（主拉）、腿日。</div>
         </div>
         <button class="ghost touch-btn" data-action="go-templates">管理模板</button>
       </div>
@@ -321,8 +294,8 @@ function renderTemplates() {
       <div class="row-between gap-12 wrap">
         <div>
           <div class="eyebrow">模板設計</div>
-          <h2>推、拉、腿與推拉同日</h2>
-          <div class="muted">已先依照你的使用習慣放入「推拉日（目前常用）」，你可以直接改成自己的版本。</div>
+          <h2>上肢A、上肢B、腿</h2>
+          <div class="muted">已改成你目前的一週三練邏輯，前兩動作各 3 組休 180 秒，後兩動作各 2 組休 150 秒。</div>
         </div>
         <button class="primary" data-action="create-template">新增模板</button>
       </div>
@@ -334,9 +307,9 @@ function renderTemplates() {
 function renderTraining() {
   if (!state.activeSession) {
     const options = sortTemplatesForQuickStart(state.templates.filter((t) => t.enabled)).map((t, index) => `
-      <button class="template-start-card ${index === 0 && t.type === 'push-pull' ? 'recommended' : ''}" data-action="start-template" data-template-id="${t.id}">
+      <button class="template-start-card ${index === 0 ? 'recommended' : ''}" data-action="start-template" data-template-id="${t.id}">
         <div class="row gap-8 wrap">
-          ${index === 0 && t.type === 'push-pull' ? '<span class="chip success">推薦先練這套</span>' : ''}
+          ${index === 0 ? '<span class="chip success">目前排第一套</span>' : ''}
           <span class="chip">${templateTypeLabel(t.type)}</span>
         </div>
         <strong>${escapeHtml(t.name)}</strong>
@@ -348,7 +321,7 @@ function renderTraining() {
       <div class="card">
         <div class="eyebrow">尚未開始</div>
         <h2>開始今天的訓練</h2>
-        <div class="muted">推拉同日已優先排序。開始後若有歷史紀錄，會自動帶入上次正式組的重量、次數與 RPE。</div>
+        <div class="muted">已依照你目前的一週三練邏輯排序。開始後若有歷史紀錄，會自動帶入上次正式組的重量、次數與 RPE。</div>
         <div class="template-start-grid top-gap">
           ${options}
         </div>
@@ -1325,8 +1298,10 @@ function sortTemplatesForQuickStart(templates) {
   return [...templates].sort((a, b) => {
     const score = (template) => {
       let value = Number(Boolean(template.enabled)) * 100;
-      if (template.type === 'push-pull') value += 50;
-      if ((template.name || '').includes('目前常用')) value += 20;
+      const name = template.name || '';
+      if (name.includes('上肢A')) value += 60;
+      if (name.includes('上肢B')) value += 40;
+      if (template.type === 'legs' || name.includes('腿')) value += 20;
       return value;
     };
     return score(b) - score(a) || (a.name || '').localeCompare(b.name || '', 'zh-Hant');
@@ -1401,6 +1376,18 @@ function mergeSeedTemplates() {
       state.templates.push(template);
     }
   }
+}
+
+function migrateTemplatesToUpperSplit(existing) {
+  const legacySeedNames = new Set(['推拉日（目前常用）', '推日', '拉日', '腿日']);
+  const nextTemplates = existing.templates.filter((template) => !legacySeedNames.has(template.name));
+  const nextNames = new Set(nextTemplates.map((template) => template.name));
+  for (const template of seedTemplates()) {
+    if (!nextNames.has(template.name)) {
+      nextTemplates.push(template);
+    }
+  }
+  existing.templates = nextTemplates;
 }
 
 function exportJsonBackup() {
@@ -1564,7 +1551,10 @@ async function loadState() {
   if (!('activeSession' in existing)) existing.activeSession = null;
   if (!('unit' in existing.settings)) existing.settings.unit = 'kg';
   if (!('showWarmup' in existing.settings)) existing.settings.showWarmup = true;
-  existing.version = 2;
+  if ((existing.version || 0) < 3) {
+    migrateTemplatesToUpperSplit(existing);
+  }
+  existing.version = 3;
   return existing;
 }
 

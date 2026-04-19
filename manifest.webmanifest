@@ -1,7 +1,7 @@
 {
   "name": "重訓課表紀錄",
   "short_name": "重訓課表",
-  "description": "離線記錄健美重訓課表，內建推、拉、腿與推拉同日模板，並可自動帶入上次訓練。",
+  "description": "離線記錄健美重訓課表，內建上肢A、上肢B、腿日模板，並可自動帶入上次訓練。",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#020617",
