@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <title>重訓課表紀錄</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">PWA 離線紀錄</div>
+        <h1>重訓課表紀錄</h1>
+      </div>
+      <button id="installBtn" class="ghost hidden">安裝</button>
+    </header>
+
+    <main class="page-wrap">
+      <section id="view-home" class="view active"></section>
+      <section id="view-templates" class="view"></section>
+      <section id="view-training" class="view"></section>
+      <section id="view-history" class="view"></section>
+      <section id="view-stats" class="view"></section>
+      <section id="view-settings" class="view"></section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button data-view="home" class="nav-btn active">首頁</button>
+      <button data-view="templates" class="nav-btn">模板</button>
+      <button data-view="training" class="nav-btn">訓練</button>
+      <button data-view="history" class="nav-btn">歷史</button>
+      <button data-view="stats" class="nav-btn">統計</button>
+      <button data-view="settings" class="nav-btn">設定</button>
+    </nav>
+  </div>
+
+  <dialog id="templateDialog" class="modal"></dialog>
+  <dialog id="exerciseDialog" class="modal"></dialog>
+  <dialog id="confirmDialog" class="modal"></dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
